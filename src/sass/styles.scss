@@ -1,0 +1,17 @@
+// @import "../precss/smartgrid";
+// @import "common";
+@import "fonts";
+@import "colors";
+@import "helpers/placeholders";
+@import "helpers/mixins";
+@import "base";
+
+/* ВаШИ БЛОКИ ПИШЕМ НИЖЕ */
+
+// @import "components/_title";
+@import "components/_path";
+@import "components/_vacancies";
+@import "components/_employment";
+// @import "components/_path/_path_list";
+// @import "path.scss";
+// @import "path.scss";

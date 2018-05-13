@@ -1,0 +1,602 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'Museo_300';
+  src: url("../fonts/museosanscyrl_300.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Museo_900';
+  src: url("../fonts/museosanscyrl_900.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'OpenSans_ExB';
+  src: url("../fonts/opensans-extrabold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'OpenSans_Reg';
+  src: url("../fonts/opensans-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'OpenSans_SmB';
+  src: url("../fonts/opensans-semibold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'ProximaNova_ExB';
+  src: url("../fonts/ProximaNova-Extrabld.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'ProximaNova_R';
+  src: url("../fonts/ProximaNova-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Ubuntu-mono_B';
+  src: url("../fonts/ubuntumono-bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Ubuntu-mono_R';
+  src: url("../fonts/ubuntumono-regular.woff2") format("woff2");
+}
+
+.path,
+.vacancies,
+.employment,
+.guarantee {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.path__title,
+.vacancies__title,
+.employment__title {
+  font-family: "Museo_900";
+  text-transform: uppercase;
+  font-size: 1.56rem;
+  line-height: 1.87rem;
+  margin: 0;
+  padding: 0;
+}
+
+.path__list,
+.vacancies__list,
+.employment__perspective-list,
+.employment__guarantee-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vacancies__subtitle,
+.employment__subtitle {
+  line-height: 1.429rem;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.vacancies__title::before,
+.employment__title::before {
+  background-color: #242427;
+  bottom: -10px;
+  right: 30%;
+  width: 150px;
+  height: 2px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ВаШИ БЛОКИ ПИШЕМ НИЖЕ */
+
+.path {
+  padding-top: 56px;
+}
+
+.path__title {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.path__title--blue {
+  color: #00bcd4;
+}
+
+.path__img {
+  width: 100%;
+  margin-bottom: 56px;
+  box-shadow: 0px 20px 32px 0px rgba(0, 0, 0, 0.17);
+}
+
+.path__list {
+  font-family: "OpenSans_SmB";
+  font-size: 0.88rem;
+  color: #242427;
+}
+
+.path__item {
+  font-family: "OpenSans_SmB";
+  font-size: 0.88rem;
+  color: #242427;
+  position: relative;
+  padding-left: 120px;
+  min-height: 90px;
+  margin-bottom: 40px;
+}
+
+.path__item::before {
+  content: attr(data-title);
+  display: flex;
+  position: absolute;
+  font-family: "Ubuntu-mono_B";
+  font-size: 2.5rem;
+  color: #242427;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  border-radius: 50%;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.1);
+  width: 87px;
+  height: 87px;
+}
+
+.path__item--01::before {
+  box-shadow: -3px 3px 4px 0px #00bcd4;
+}
+
+.path__item--02::before {
+  box-shadow: 3px -3px 4px 0px #00bcd4;
+}
+
+.path__item--03::before {
+  box-shadow: -3px 3px 4px 0px #00bcd4;
+}
+
+.path__item--04::before {
+  box-shadow: 3px 3px 4px 0px #00bcd4;
+}
+
+.path__item--05::before {
+  box-shadow: -3px 3px 4px 0px #00bcd4;
+}
+
+.path__item--06::before {
+  box-shadow: -3px -3px 4px 0px #00bcd4;
+  background-color: #242427;
+  color: white;
+}
+
+.path__item--06 {
+  font-family: "Ubuntu-mono_B";
+  font-size: 0.75rem;
+  color: #242427;
+  text-transform: uppercase;
+}
+
+.path__text {
+  margin: 0;
+}
+
+.path__text--bg-blue {
+  background-color: #00bcd4;
+}
+
+.path__link {
+  text-decoration: none;
+  font-family: "OpenSans_ExB";
+  color: #242427;
+}
+
+.vacancies {
+  padding-top: 66px;
+  background-image: url(../img/bg-grey.jpg);
+  padding-bottom: 62px;
+}
+
+.vacancies__box-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.vacancies__underline {
+  position: relative;
+  margin-bottom: 36px;
+  margin: 0;
+  margin-bottom: 26px;
+}
+
+.vacancies__title {
+  text-align: center;
+}
+
+.vacancies__title--blue {
+  color: #00bcd4;
+}
+
+.vacancies__title::before {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.vacancies__subtitle {
+  font-family: "Museo_900";
+  font-size: 0.88rem;
+  color: #242427;
+}
+
+.vacancies__subtitle--black {
+  color: #00bcd4;
+}
+
+.vacancies__list .vacancies__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.vacancies__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 15px 32px 0px rgba(0, 0, 0, 0.16);
+  width: 267px;
+  height: 267px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.vacancies__item-caption {
+  font-family: "Museo_900";
+  font-size: 1rem;
+  color: #242427;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-transform: uppercase;
+  min-height: 76px;
+  padding-bottom: 15px;
+  padding-left: 82px;
+  margin: 0;
+  position: relative;
+  border-bottom: 1px solid rgba(36, 36, 39, 0.102);
+}
+
+.vacancies__item-caption::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #00bcd4;
+  width: 60px;
+  height: 4px;
+  bottom: 20px;
+}
+
+.vacancies__item-caption::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  border-radius: 50%;
+  background-color: #242427;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.17);
+  width: 58px;
+  height: 58px;
+}
+
+.vacancies__item-caption--fullstack::before {
+  background-image: url(../img/coding_1.png);
+}
+
+.vacancies__item-caption--front-end::before {
+  background-image: url(../img/code.png);
+}
+
+.vacancies__item-caption--back-end::before {
+  background-image: url(../img/coding_2.png);
+}
+
+.vacancies__item-caption--web-developer::before {
+  background-image: url(../img/wordpress.png);
+}
+
+.vacancies__item-caption--html-coder::before {
+  background-image: url(../img/website.png);
+}
+
+.vacancies__item-caption--before {
+  padding: 0;
+  border-bottom: none;
+}
+
+.vacancies__item-caption--before::before {
+  display: none;
+}
+
+.vacancies__item-caption--before::after {
+  display: none;
+}
+
+.vacancies__item-text {
+  font-family: "OpenSans_Reg";
+  font-size: 1rem;
+  color: #242427;
+  line-height: 1.5rem;
+  margin: 0;
+}
+
+.vacancies__item-salary {
+  font-family: "Ubuntu-mono_B";
+  font-size: 1rem;
+  color: #242427;
+  margin: 0;
+}
+
+.vacancies__item-salary--number {
+  color: #00bcd4;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.vacancies__item-salary--number::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #00bcd4;
+  background-color: #242427;
+  right: 0;
+  bottom: 2px;
+  width: 100%;
+  height: 2px;
+}
+
+.vacancies__item-amt {
+  font-family: "Ubuntu-mono_R";
+  font-size: 1rem;
+  color: #636363;
+  margin: 0;
+}
+
+.vacancies__item-amt--number {
+  font-family: "Ubuntu-mono_B";
+  font-size: 1.88rem;
+  color: black;
+}
+
+.vacancies__item-button {
+  font-family: "Museo_900";
+  font-size: 0.88rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(0deg, #ffc617 0%, #fb0740 100%);
+  box-shadow: 0px 12px 20px 0px rgba(28, 28, 30, 0.21);
+  width: 241px;
+  height: 55px;
+  cursor: pointer;
+  text-transform: uppercase;
+  line-height: 1.857rem;
+  text-shadow: 0px 1px 1px rgba(28, 28, 30, 0.32);
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+.vacancies__item-button:hover {
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+}
+
+.vacancies__item-data {
+  font-family: "Ubuntu-mono_R";
+  font-size: 0.75rem;
+  color: #242427;
+  -webkit-transform: matrix(1, 0, 0, 0.98377, 0, 0);
+  transform: matrix(1, 0, 0, 0.98377, 0, 0);
+}
+
+.vacancies__item-data--red {
+  color: #fb1c3e;
+}
+
+.vacancies__item-data--bold {
+  font-family: "Ubuntu-mono_B";
+}
+
+.employment {
+  padding-top: 40px;
+  background-image: url(../img/bg-dark.jpg);
+  padding-bottom: 60px;
+}
+
+.employment__box-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.employment__underline {
+  position: relative;
+  margin-bottom: 36px;
+  margin: 0;
+  margin-bottom: 26px;
+}
+
+.employment__subtitle {
+  font-family: "Museo_900";
+  font-size: 0.88rem;
+  color: white;
+}
+
+.employment__subtitle--blue {
+  color: #00bcd4;
+}
+
+.employment__title {
+  color: white;
+  text-align: center;
+}
+
+.employment__title--blue {
+  color: #00bcd4;
+}
+
+.employment__title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #00bcd4;
+}
+
+.employment__perspective {
+  font-family: "Ubuntu-mono_B";
+  font-size: 1.25rem;
+  color: white;
+  width: 72%;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.employment__perspective-list {
+  color: white;
+  margin-bottom: 54px;
+}
+
+.employment__perspective-item:first-of-type {
+  margin-bottom: 40px;
+  width: 72%;
+}
+
+.employment__perspective-item:nth-of-type(2) {
+  width: 90%;
+}
+
+.employment__perspective-text {
+  font-family: "OpenSans_SmB";
+  font-size: 0.88rem;
+  color: #c7c7c7;
+  position: relative;
+  padding-left: 40px;
+  line-height: 1.714;
+  text-align: left;
+  margin: 0;
+}
+
+.employment__perspective-text--bold {
+  font-family: OpenSans_ExB;
+  color: white;
+}
+
+.employment__perspective-text--bold::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-width: 2px;
+  border-color: white;
+  border-style: solid;
+  border-radius: 50%;
+  background-color: #00bcd4;
+  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.35);
+  left: 0;
+  top: 8px;
+  width: 17px;
+  height: 17px;
+}
+
+.guarantee {
+  font-family: "OpenSans_SmB";
+  font-size: 0.88rem;
+  color: #c7c7c7;
+  background-color: #313133;
+}
+
+.guarantee__text {
+  color: transparent;
+  margin: 0;
+}
+
+.guarantee__about {
+  line-height: 1.5;
+  width: 85%;
+  margin: 0;
+  margin-bottom: 46px;
+}
+
+.guarantee__about--bold {
+  font-family: "OpenSans_ExB";
+  color: white;
+}
+
+.employment__guarantee-list {
+  padding-bottom: 40px;
+}
+
+.employment__guarantee-item {
+  position: relative;
+  padding-left: 34px;
+}
+
+.employment__guarantee-item:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+
+.employment__guarantee-title {
+  font-family: "Ubuntu-mono_B";
+  font-size: 1rem;
+  color: white;
+  margin: 0;
+}
+
+.employment__guarantee-title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #00bcd4;
+  left: 0;
+  top: -16px;
+  width: 103px;
+  height: 1px;
+}
+
+.employment__guarantee-about {
+  margin: 0;
+}
+
+.employment__guarantee-about::before {
+  content: attr(data-title);
+  display: flex;
+  position: absolute;
+  font-family: "Ubuntu-mono_B";
+  font-size: 1.5rem;
+  color: #00bcd4;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: -6px;
+}

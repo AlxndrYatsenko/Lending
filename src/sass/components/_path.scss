@@ -1,0 +1,92 @@
+.path {
+  @extend %container;
+  padding-top: 56px;
+}
+
+.path__title {
+  @extend %title;
+  text-align: center;
+
+  margin-bottom: 36px;
+
+  &--blue {
+    color: $main-blue;
+  }
+}
+
+.path__img {
+  width: 100%;
+  margin-bottom: 56px;
+  box-shadow: 0px 20px 32px 0px rgba(0, 0, 0, 0.17);
+}
+
+.path__list {
+  @extend %list;
+  @include font-mixin("OpenSans_SmB", 0.88rem, $header-color);
+}
+
+.path__item {
+  @include font-mixin("OpenSans_SmB", 0.88rem, $header-color);
+  position: relative;
+  padding-left: 120px;
+  min-height: 90px;
+  margin-bottom: 40px;
+
+  &::before {
+    @include before(attr(data-title), flex);
+    @include font-mixin("Ubuntu-mono_B", 2.5rem, $header-color);
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    border-radius: 50%;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.1);
+    width: 87px;
+    height: 87px;
+  }
+
+  &--01::before {
+    box-shadow: -3px 3px 4px 0px rgba($main-blue, 1);
+  }
+
+  &--02::before {
+    box-shadow: 3px -3px 4px 0px rgba($main-blue, 1);
+  }
+
+  &--03::before {
+    box-shadow: -3px 3px 4px 0px rgba($main-blue, 1);
+  }
+
+  &--04::before {
+    box-shadow: 3px 3px 4px 0px rgba($main-blue, 1);
+  }
+
+  &--05::before {
+    box-shadow: -3px 3px 4px 0px rgba($main-blue, 1);
+  }
+
+  &--06::before {
+    box-shadow: -3px -3px 4px 0px rgba($main-blue, 1);
+    background-color: $header-color;
+    color: $white;
+  }
+
+  &--06 {
+    @include font-mixin("Ubuntu-mono_B", 0.75rem, $header-color);
+    text-transform: uppercase;
+  }
+}
+
+.path__text {
+  margin: 0;
+
+  &--bg-blue {
+    background-color: $main-blue;
+  }
+}
+
+.path__link {
+  text-decoration: none;
+  font-family: "OpenSans_ExB";
+  color: $header-color;
+}
+

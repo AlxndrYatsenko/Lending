@@ -1,0 +1,19 @@
+@mixin font-mixin($f-family, $f-size, $color) {
+  font-family: $f-family;
+  font-size: $f-size;
+  color: $color;
+}
+
+@mixin before($content, $display) {
+  content: $content;
+  display: $display;
+  position: absolute;
+}
+
+@mixin flex($direction, $justify-content, $align-items){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
