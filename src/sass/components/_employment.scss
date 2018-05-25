@@ -1,12 +1,12 @@
 .employment {
   @extend %container;
-  padding-top: 40px;
   background-image: url(../img/bg-dark.jpg);
   padding-bottom: 60px;
 }
 
 .employment__box-info {
   @include flex(column, space-between, center);
+  padding-top: 40px;
   margin-bottom: 36px;
 }
 
@@ -20,6 +20,7 @@
 .employment__subtitle {
   @include font-mixin("Museo_900", 0.88rem, $white);
   @extend %subtitle;
+  max-width: 440px;
 
   &--blue {
     color: $main-blue;
@@ -95,9 +96,10 @@
 }
 
 .guarantee {
-  @extend %container;
+  // @extend %container;
   @include font-mixin("OpenSans_SmB", 0.88rem, $light-smoke2);
   background-color: $dark-smoke3;
+  padding: 10px;
 }
 
 .guarantee__text {
@@ -119,7 +121,7 @@
 
 .employment__guarantee-list {
   @extend %list;
-  padding-bottom: 40px;
+  padding-bottom: 38px;
 }
 
 .employment__guarantee-item {

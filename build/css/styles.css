@@ -47,20 +47,22 @@
 
 .path,
 .vacancies,
-.employment,
-.guarantee {
+.employment {
+  min-width: 320px;
   padding-left: 15px;
   padding-right: 15px;
+  margin: 0 auto;
 }
 
 .path__title,
 .vacancies__title,
 .employment__title {
+  max-width: 530px;
   font-family: "Museo_900";
   text-transform: uppercase;
   font-size: 1.56rem;
   line-height: 1.87rem;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -70,7 +72,7 @@
 .employment__guarantee-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .vacancies__subtitle,
@@ -86,7 +88,9 @@
 .employment__title::before {
   background-color: #242427;
   bottom: -10px;
-  right: 30%;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
   width: 150px;
   height: 2px;
 }
@@ -109,12 +113,9 @@ img {
 
 /* ВаШИ БЛОКИ ПИШЕМ НИЖЕ */
 
-.path {
-  padding-top: 56px;
-}
-
 .path__title {
   text-align: center;
+  padding-top: 56px;
   margin-bottom: 36px;
 }
 
@@ -123,7 +124,8 @@ img {
 }
 
 .path__img {
-  width: 100%;
+  width: 290px;
+  margin: 0 auto;
   margin-bottom: 56px;
   box-shadow: 0px 20px 32px 0px rgba(0, 0, 0, 0.17);
 }
@@ -132,6 +134,7 @@ img {
   font-family: "OpenSans_SmB";
   font-size: 0.88rem;
   color: #242427;
+  margin-bottom: 62px;
 }
 
 .path__item {
@@ -139,8 +142,13 @@ img {
   font-size: 0.88rem;
   color: #242427;
   position: relative;
-  padding-left: 120px;
+  width: 290px;
+  padding-left: 98px;
   min-height: 90px;
+  margin: 0 auto;
+}
+
+.path__item:not(:last-of-type) {
   margin-bottom: 40px;
 }
 
@@ -151,6 +159,7 @@ img {
   font-family: "Ubuntu-mono_B";
   font-size: 2.5rem;
   color: #242427;
+  line-height: 1.25rem;
   align-items: center;
   justify-content: center;
   left: 0;
@@ -208,9 +217,7 @@ img {
 }
 
 .vacancies {
-  padding-top: 66px;
   background-image: url(../img/bg-grey.jpg);
-  padding-bottom: 62px;
 }
 
 .vacancies__box-info {
@@ -218,6 +225,7 @@ img {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding-top: 66px;
   margin-bottom: 36px;
 }
 
@@ -252,6 +260,10 @@ img {
   color: #00bcd4;
 }
 
+.vacancies__list {
+  padding-bottom: 62px;
+}
+
 .vacancies__list .vacancies__item:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -263,7 +275,7 @@ img {
   background-color: white;
   box-shadow: 0px 15px 32px 0px rgba(0, 0, 0, 0.16);
   width: 267px;
-  height: 267px;
+  min-height: 267px;
   margin: 0 auto;
   padding: 15px;
 }
@@ -309,23 +321,25 @@ img {
 }
 
 .vacancies__item-caption--fullstack::before {
-  background-image: url(../img/coding_1.png);
+  background-image: url(../img/vacancies/coding.svg);
+  width: 58px;
+  height: 58px;
 }
 
 .vacancies__item-caption--front-end::before {
-  background-image: url(../img/code.png);
+  background-image: url(../img/vacancies/code.svg);
 }
 
 .vacancies__item-caption--back-end::before {
-  background-image: url(../img/coding_2.png);
+  background-image: url(../img/vacancies/coding-1.svg);
 }
 
 .vacancies__item-caption--web-developer::before {
-  background-image: url(../img/wordpress.png);
+  background-image: url(../img/vacancies/wordpress.svg);
 }
 
 .vacancies__item-caption--html-coder::before {
-  background-image: url(../img/website.png);
+  background-image: url(../img/vacancies/multimedia.svg);
 }
 
 .vacancies__item-caption--before {
@@ -358,20 +372,8 @@ img {
 
 .vacancies__item-salary--number {
   color: #00bcd4;
-  font-size: 1.5rem;
-  position: relative;
-}
-
-.vacancies__item-salary--number::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: #00bcd4;
-  background-color: #242427;
-  right: 0;
-  bottom: 2px;
-  width: 100%;
-  height: 2px;
+  font-size: 1.375rem;
+  border-bottom: 2px black solid;
 }
 
 .vacancies__item-amt {
@@ -393,7 +395,7 @@ img {
   color: white;
   border: none;
   border-radius: 5px;
-  background-image: linear-gradient(0deg, #ffc617 0%, #fb0740 100%);
+  background-image: linear-gradient(90deg, #ffc617 0%, #fb0740 100%);
   box-shadow: 0px 12px 20px 0px rgba(28, 28, 30, 0.21);
   width: 241px;
   height: 55px;
@@ -428,7 +430,6 @@ img {
 }
 
 .employment {
-  padding-top: 40px;
   background-image: url(../img/bg-dark.jpg);
   padding-bottom: 60px;
 }
@@ -438,6 +439,7 @@ img {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding-top: 40px;
   margin-bottom: 36px;
 }
 
@@ -452,6 +454,7 @@ img {
   font-family: "Museo_900";
   font-size: 0.88rem;
   color: white;
+  max-width: 440px;
 }
 
 .employment__subtitle--blue {
@@ -534,6 +537,7 @@ img {
   font-size: 0.88rem;
   color: #c7c7c7;
   background-color: #313133;
+  padding: 10px;
 }
 
 .guarantee__text {
@@ -554,7 +558,7 @@ img {
 }
 
 .employment__guarantee-list {
-  padding-bottom: 40px;
+  padding-bottom: 38px;
 }
 
 .employment__guarantee-item {
@@ -599,4 +603,12 @@ img {
   justify-content: center;
   left: 0;
   top: -6px;
+}
+
+@media (min-width: 320px) {
+  .path,
+  .vacancies,
+  .employment {
+    max-width: 767.98px;
+  }
 }
