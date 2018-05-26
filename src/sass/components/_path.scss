@@ -1,17 +1,36 @@
 .path {
   @extend %container;
-  
 }
 
 .path__title {
   @extend %title;
   text-align: center;
   padding-top: 56px;
-
+  margin: 0 auto;
   margin-bottom: 36px;
 
   &--blue {
     color: $main-blue;
+  }
+
+  @media (min-width: 768px) {
+    text-align: left;
+    margin: 0;
+    margin-bottom: 130px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1919.98px){
+    max-width: 767.98px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.path__wrapper {
+  position: relative;
+  margin: 0 auto;
+  @media (min-width: 768px) and (max-width: 1919.98px){
+    max-width: 767.98px;
   }
 }
 
@@ -20,24 +39,85 @@
   margin: 0 auto;
   margin-bottom: 56px;
   box-shadow: 0px 20px 32px 0px rgba(0, 0, 0, 0.17);
+
+  @media (min-width: 768px) {
+    width: 362px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 
 .path__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @extend %list;
   @include font-mixin("OpenSans_SmB", 0.88rem, $header-color);
   margin-bottom: 62px;
+  width: 290px;
+  position: relative;
+
+  @media (min-width: 768px) {
+    align-items: flex-start;
+    width: 100%;
+  }
 }
 
 .path__item {
   @include font-mixin("OpenSans_SmB", 0.88rem, $header-color);
+  line-height: 1.5rem;
   position: relative;
   width: 290px;
   padding-left: 98px;
   min-height: 90px;
-  margin: 0 auto;
-  
-  &:not(:last-of-type){
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &:nth-last-of-type(n + 4) {
+    @media (min-width: 768px) {
+      &::after {
+        @include before("", block);
+        background-color: $dark-smoke2;
+        opacity: 0.141;
+        width: 1px;
+        height: 42px;
+        bottom: -41px;
+        left: 44px;
+      }
+    }
+  }
+
+  &:not(:last-of-type) {
     margin-bottom: 40px;
+  }
+
+  &:last-of-type {
+    @media (min-width: 768px) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      &::after {
+        @include before("", block);
+        background-color: $dark-smoke2;
+        left: -46px;
+        top: 45px;
+        width: 46px;
+        height: 1px;
+      }
+    }
+  }
+
+  &:nth-last-of-type(2) {
+    @media (min-width: 768px) {
+      width: 100px;
+      margin-bottom: 0;
+    }
   }
 
   &::before {
@@ -80,8 +160,14 @@
   }
 
   &--06 {
-    @include font-mixin("Ubuntu-mono_B", 0.75rem, $header-color);
+    @include font-mixin("Museo_900", 0.75rem, $header-color);
     text-transform: uppercase;
+    width: 280px;
+    align-self: flex-start;
+
+    @media (min-width: 768px) {
+      width: 410px;
+    }
   }
 }
 
@@ -92,9 +178,11 @@
     background-color: $main-blue;
   }
 
-  // &--768-blue{
-  //   display: block;
-  // }
+  &--768-blue {
+    @media (min-width: 768px) {
+      background-color: $main-blue;
+    }
+  }
 }
 
 .path__link {
@@ -102,4 +190,3 @@
   font-family: "OpenSans_ExB";
   color: $header-color;
 }
-

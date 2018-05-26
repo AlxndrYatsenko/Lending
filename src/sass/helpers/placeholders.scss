@@ -1,4 +1,4 @@
-%container{
+%container {
   min-width: 320px;
   padding-left: 15px;
   padding-right: 15px;
@@ -6,6 +6,12 @@
 
   @media (min-width: 320px) {
     max-width: 767.98px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1919.98px){
+    max-width: 1919.98px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
@@ -17,8 +23,12 @@
   line-height: 1.87rem;
   margin: 0 auto;
   padding: 0;
-}
 
+  @media (min-width: 768px) {
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+  }
+}
 
 %list {
   list-style: none;
@@ -26,7 +36,7 @@
   margin: 0 auto;
 }
 
-%subtitle{
+%subtitle {
   line-height: 1.429rem;
   position: relative;
   text-align: center;
@@ -34,7 +44,7 @@
   margin: 0;
 }
 
-%underline{
+%underline {
   background-color: $header-color;
   bottom: -10px;
   right: 50%;
