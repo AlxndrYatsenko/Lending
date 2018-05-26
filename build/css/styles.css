@@ -45,8 +45,8 @@
   src: url("../fonts/ubuntumono-regular.woff2") format("woff2");
 }
 
-.path,
-.vacancies,
+.path__wrapper,
+.vacancies__wrapper,
 .employment {
   min-width: 320px;
   padding-left: 15px;
@@ -113,6 +113,10 @@ img {
 
 /* ВаШИ БЛОКИ ПИШЕМ НИЖЕ */
 
+.path__wrapper {
+  margin: 0 auto;
+}
+
 .path__title {
   text-align: center;
   padding-top: 56px;
@@ -124,9 +128,8 @@ img {
   color: #00bcd4;
 }
 
-.path__wrapper {
+.path__box-info {
   position: relative;
-  margin: 0 auto;
 }
 
 .path__img {
@@ -175,33 +178,34 @@ img {
   justify-content: center;
   left: 0;
   border-radius: 50%;
+  background-color: white;
   box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.1);
   width: 87px;
   height: 87px;
 }
 
 .path__item--01::before {
-  box-shadow: -3px 3px 4px 0px #00bcd4;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.1), -3px 3px 4px 0px #00bcd4;
 }
 
 .path__item--02::before {
-  box-shadow: 3px -3px 4px 0px #00bcd4;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.1), 3px -3px 4px 0px #00bcd4;
 }
 
 .path__item--03::before {
-  box-shadow: -3px 3px 4px 0px #00bcd4;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.1), -3px 3px 4px 0px #00bcd4;
 }
 
 .path__item--04::before {
-  box-shadow: 3px 3px 4px 0px #00bcd4;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.1), 3px 3px 4px 0px #00bcd4;
 }
 
 .path__item--05::before {
-  box-shadow: -3px 3px 4px 0px #00bcd4;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.1), -3px 3px 4px 0px #00bcd4;
 }
 
 .path__item--06::before {
-  box-shadow: -3px -3px 4px 0px #00bcd4;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.1), -3px -3px 4px 0px #00bcd4;
   background-color: #242427;
   color: white;
 }
@@ -229,7 +233,13 @@ img {
   color: #242427;
 }
 
+.vacancies {
+  position: relative;
+  background-image: url(../img/bg-grey.jpg);
+}
+
 .vacancies__wrapper {
+  position: relative;
   margin: 0 auto;
   background-image: url(../img/bg-grey.jpg);
 }
@@ -559,6 +569,7 @@ img {
   background-color: #313133;
   padding: 16px;
   padding-top: 36px;
+  position: relative;
 }
 
 .guarantee__text {
@@ -625,14 +636,6 @@ img {
   margin: 0;
 }
 
-@media (min-width: 320px) {
-  .path,
-  .vacancies,
-  .employment {
-    max-width: 767.98px;
-  }
-}
-
 @media (min-width: 768px) {
   .path__title,
   .vacancies__title,
@@ -641,10 +644,27 @@ img {
     line-height: 2.5rem;
   }
 
+  .path__wrapper {
+    width: 767.98px;
+    background-image: url(../img/path/bg_sec_7.png);
+    background-repeat: no-repeat no-repeat;
+    background-position: 30px 118px;
+  }
+
   .path__title {
     text-align: left;
     margin: 0;
     margin-bottom: 130px;
+  }
+
+  .path__title {
+    max-width: 767.98px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .path__box-info {
+    min-width: 650px;
   }
 
   .path__img {
@@ -665,13 +685,13 @@ img {
     justify-content: center;
   }
 
-  .path__item:nth-last-of-type(n + 4)::after {
+  .path__item:not(:nth-last-of-type(2))::after {
     content: "";
     display: block;
     position: absolute;
     background-color: #231e1f;
     opacity: 0.141;
-    width: 1px;
+    width: 2px;
     height: 42px;
     bottom: -41px;
     left: 44px;
@@ -688,14 +708,16 @@ img {
     display: block;
     position: absolute;
     background-color: #231e1f;
-    left: -46px;
+    left: -50px;
     top: 45px;
     width: 46px;
     height: 1px;
+    opacity: 1;
   }
 
   .path__item:nth-last-of-type(2) {
-    width: 100px;
+    width: 220px;
+    margin-right: 25px;
     margin-bottom: 0;
   }
 
@@ -707,25 +729,18 @@ img {
     background-color: #00bcd4;
   }
 
+  .path__link {
+    border-bottom: 1px solid #00bcd4;
+  }
+
   .vacancies {
-    background-image: url(../img/bg-grey.jpg);
-    position: relative;
+    margin-bottom: 122px;
+    box-shadow: inset 0px -97px 0px 0px white, inset 0px 45px 0px 0px white;
   }
 
   .vacancies__wrapper {
     box-shadow: 0px 20px 32px 0px rgba(0, 0, 0, 0.17);
     width: 698px;
-  }
-
-  .vacancies__wrapper::before {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 45px;
-    color: white;
-    width: 100%;
-    left: 0;
-    top: 0;
   }
 
   .vacancies__title::before {
@@ -745,9 +760,31 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-left: 64px;
-    padding-right: 64px;
     margin-bottom: 0;
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+
+  .vacancies__list::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 430px;
+    width: 16px;
+    right: -16px;
+    bottom: -16px;
+    background-image: url(../img/bg-green.jpg);
+  }
+
+  .vacancies__list::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 16px;
+    width: 630px;
+    right: -16px;
+    bottom: -16px;
+    background-image: url(../img/bg-green.jpg);
   }
 
   .vacancies__item {
@@ -791,7 +828,7 @@ img {
     line-height: 1.875rem;
     color: #2c2c31;
     background-color: white;
-    width: 583px;
+    width: 100%;
     margin-bottom: 70px;
   }
 
@@ -838,7 +875,7 @@ img {
   }
 
   .guarantee {
-    padding-top: 0;
+    padding-top: 145px;
     padding-right: 0;
     padding-left: 54px;
     box-shadow: 0px 15px 36px 0px rgba(0, 0, 0, 0.17);
@@ -846,6 +883,9 @@ img {
 
   .guarantee__text {
     display: block;
+    position: absolute;
+    top: -40px;
+    right: 0;
     font-family: "Ubuntu-mono_B";
     font-size: 9.375rem;
     color: #313133;
@@ -854,6 +894,32 @@ img {
     text-shadow: 0px 18px 11px rgba(0, 0, 0, 0.14);
     text-align: right;
     margin: 0;
+  }
+
+  .guarantee__about::before {
+    content: "dream";
+    display: block;
+    position: absolute;
+    font-family: "Ubuntu-mono_R";
+    font-size: 1.875rem;
+    color: white;
+    top: 14px;
+    left: -62px;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+  .guarantee__about::after {
+    content: "guarantee";
+    display: block;
+    position: absolute;
+    font-family: "Ubuntu-mono_R";
+    font-size: 1.25rem;
+    color: white;
+    top: 142px;
+    right: -75px;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
   }
 
   .employment__guarantee-item {
@@ -879,21 +945,10 @@ img {
 }
 
 @media (min-width: 768px) and (max-width: 1919.98px) {
-  .path,
-  .vacancies,
+  .path__wrapper,
+  .vacancies__wrapper,
   .employment {
-    max-width: 1919.98px;
     padding-left: 40px;
     padding-right: 40px;
-  }
-
-  .path__title {
-    max-width: 767.98px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .path__wrapper {
-    max-width: 767.98px;
   }
 }

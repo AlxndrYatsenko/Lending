@@ -65,7 +65,6 @@
     @media (min-width: 768px) {
       width: 500px;
       bottom: -14px;
-      // left: 0;
     }
   }
 
@@ -86,7 +85,7 @@
     line-height: 1.875rem;
     color: $dark;
     background-color: $white;
-    width: 583px;
+    width: 100%;
     margin-bottom: 70px;
   }
 }
@@ -181,9 +180,10 @@
   background-color: $dark-smoke3;
   padding: 16px;
   padding-top: 36px;
+  position: relative;
 
   @media (min-width: 768px) {
-    padding-top: 0;
+    padding-top: 145px;
     padding-right: 0;
     padding-left: 54px;
     box-shadow: 0px 15px 36px 0px rgba(0, 0, 0, 0.17);
@@ -192,10 +192,12 @@
 
 .guarantee__text {
   display: none;
-  // margin: 0;
 
   @media (min-width: 768px) {
     display: block;
+    position: absolute;
+    top: -40px;
+    right: 0;
     @include font-mixin("Ubuntu-mono_B", 9.375rem, $dark-smoke3);
     padding-left: 0;
     line-height: 1.2;
@@ -214,6 +216,24 @@
   &--bold {
     font-family: "OpenSans_ExB";
     color: $white;
+  }
+
+  @media (min-width: 768px) {
+    &::before {
+      @include before("dream", block);
+      @include font-mixin("Ubuntu-mono_R", 1.875rem, $white);
+      top: 14px;
+      left: -62px;
+      transform: rotate(90deg);
+    }
+
+    &::after {
+      @include before("guarantee", block);
+      @include font-mixin("Ubuntu-mono_R", 1.25rem, $white);
+      top: 142px;
+      right: -75px;
+      transform: rotate(90deg);
+    }
   }
 }
 

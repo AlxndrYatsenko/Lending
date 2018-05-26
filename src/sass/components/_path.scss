@@ -1,5 +1,17 @@
 .path {
+}
+
+.path__wrapper {
   @extend %container;
+  margin: 0 auto;
+  @media (min-width: 768px) {
+    width: 767.98px;
+    // padding-left: 40px;
+    // padding-right: 40px;
+    background-image: url(../img/path/bg_sec_7.png);
+    background-repeat: no-repeat no-repeat;
+    background-position: 30px 118px;
+  }
 }
 
 .path__title {
@@ -19,18 +31,18 @@
     margin-bottom: 130px;
   }
 
-  @media (min-width: 768px) and (max-width: 1919.98px){
+  @media (min-width: 768px){
     max-width: 767.98px;
     margin-left: auto;
     margin-right: auto;
   }
 }
 
-.path__wrapper {
+.path__box-info {
   position: relative;
-  margin: 0 auto;
-  @media (min-width: 768px) and (max-width: 1919.98px){
-    max-width: 767.98px;
+
+  @media (min-width: 768px) {
+    min-width: 650px;
   }
 }
 
@@ -78,13 +90,13 @@
     justify-content: center;
   }
 
-  &:nth-last-of-type(n + 4) {
+  &:not(:nth-last-of-type(2)) {
     @media (min-width: 768px) {
       &::after {
         @include before("", block);
         background-color: $dark-smoke2;
         opacity: 0.141;
-        width: 1px;
+        width: 2px;
         height: 42px;
         bottom: -41px;
         left: 44px;
@@ -105,17 +117,19 @@
       &::after {
         @include before("", block);
         background-color: $dark-smoke2;
-        left: -46px;
+        left: -50px;
         top: 45px;
         width: 46px;
         height: 1px;
+        opacity: 1;
       }
     }
   }
 
   &:nth-last-of-type(2) {
     @media (min-width: 768px) {
-      width: 100px;
+      width: 220px;
+      margin-right: 25px;
       margin-bottom: 0;
     }
   }
@@ -128,33 +142,40 @@
     justify-content: center;
     left: 0;
     border-radius: 50%;
+    background-color: $white;
     box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.1);
     width: 87px;
     height: 87px;
   }
 
   &--01::before {
-    box-shadow: -3px 3px 4px 0px rgba($main-blue, 1);
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.1),
+      -3px 3px 4px 0px rgba($main-blue, 1);
   }
 
   &--02::before {
-    box-shadow: 3px -3px 4px 0px rgba($main-blue, 1);
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.1),
+      3px -3px 4px 0px rgba($main-blue, 1);
   }
 
   &--03::before {
-    box-shadow: -3px 3px 4px 0px rgba($main-blue, 1);
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.1),
+      -3px 3px 4px 0px rgba($main-blue, 1);
   }
 
   &--04::before {
-    box-shadow: 3px 3px 4px 0px rgba($main-blue, 1);
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.1),
+      3px 3px 4px 0px rgba($main-blue, 1);
   }
 
   &--05::before {
-    box-shadow: -3px 3px 4px 0px rgba($main-blue, 1);
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.1),
+      -3px 3px 4px 0px rgba($main-blue, 1);
   }
 
   &--06::before {
-    box-shadow: -3px -3px 4px 0px rgba($main-blue, 1);
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.1),
+      -3px -3px 4px 0px rgba($main-blue, 1);
     background-color: $header-color;
     color: $white;
   }
@@ -189,4 +210,8 @@
   text-decoration: none;
   font-family: "OpenSans_ExB";
   color: $header-color;
+
+  @media (min-width: 768px) {
+    border-bottom: 1px solid $main-blue;
+  }
 }
