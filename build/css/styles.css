@@ -45,7 +45,7 @@
   src: url("../fonts/ubuntumono-regular.woff2") format("woff2");
 }
 
-.path__wrapper,
+.path,
 .vacancies__wrapper,
 .employment {
   min-width: 320px;
@@ -133,6 +133,7 @@ img {
 }
 
 .path__img {
+  display: block;
   width: 290px;
   margin: 0 auto;
   margin-bottom: 56px;
@@ -645,7 +646,7 @@ img {
   }
 
   .path__wrapper {
-    width: 767.98px;
+    max-width: 768px;
     background-image: url(../img/path/bg_sec_7.png);
     background-repeat: no-repeat no-repeat;
     background-position: 30px 118px;
@@ -653,14 +654,8 @@ img {
 
   .path__title {
     text-align: left;
-    margin: 0;
+    width: 100%;
     margin-bottom: 130px;
-  }
-
-  .path__title {
-    max-width: 767.98px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .path__box-info {
@@ -679,22 +674,22 @@ img {
     width: 100%;
   }
 
-  .path__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .path__item:not(:nth-last-of-type(2))::after {
+  .path__list::before {
     content: "";
     display: block;
     position: absolute;
     background-color: #231e1f;
     opacity: 0.141;
     width: 2px;
-    height: 42px;
-    bottom: -41px;
+    height: 600px;
+    bottom: 0;
     left: 44px;
+  }
+
+  .path__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .path__item:last-of-type {
@@ -744,7 +739,7 @@ img {
   }
 
   .vacancies__title::before {
-    bottom: -53px;
+    bottom: -52px;
     right: 158px;
     -webkit-transform: none;
     transform: none;
@@ -944,8 +939,72 @@ img {
   }
 }
 
+@media (min-width: 768px) and (min-width: 1920px) {
+  .path__item:last-of-type::after {
+    width: 189px;
+    left: -192px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .path,
+  .vacancies__wrapper,
+  .employment {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .path__wrapper {
+    max-width: 1146px;
+    padding-right: 0;
+  }
+
+  .path__title {
+    max-width: 652px;
+    padding-top: 152px;
+    margin-right: 0;
+  }
+
+  .path__img {
+    width: 654px;
+  }
+
+  .path__list {
+    padding-left: 52px;
+  }
+
+  .path__list::before {
+    height: 911px;
+    left: 94px;
+  }
+
+  .path__list::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url(../img/path/decor-element_sec_7.png);
+    width: 156px;
+    height: 313px;
+    top: 170px;
+    left: -350px;
+  }
+
+  .path__item {
+    font-size: 1.125rem;
+    line-height: 1.444;
+  }
+
+  .path__item--06 {
+    width: 660px;
+  }
+
+  .path__item--06 .path__text {
+    width: 490px;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1919.98px) {
-  .path__wrapper,
+  .path,
   .vacancies__wrapper,
   .employment {
     padding-left: 40px;
