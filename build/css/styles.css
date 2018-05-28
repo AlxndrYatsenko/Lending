@@ -735,13 +735,15 @@ img {
   }
 
   .vacancies {
-    margin-bottom: 122px;
-    box-shadow: inset 0px -97px 0px 0px white, inset 0px 45px 0px 0px white;
+    margin-bottom: 0;
+    padding-bottom: 122px;
+    background: url(../../img/bg_green.jpg) bottom 108px right 474px no-repeat, url(../img/vacancies/bg_grey_sec_8_720.jpg) 50% repeat-x;
   }
 
   .vacancies__wrapper {
     box-shadow: 0px 20px 32px 0px rgba(0, 0, 0, 0.17);
     width: 698px;
+    background: url(../img/vacancies/bg_grey_sec_8_720.jpg);
   }
 
   .vacancies__title::before {
@@ -751,12 +753,6 @@ img {
     transform: none;
     width: 250px;
     height: 2px;
-  }
-
-  .vacancies__subtitle {
-    font-size: 1.125rem;
-    line-height: 1.875rem;
-    text-align: right;
   }
 
   .vacancies__subtitle--black {
@@ -770,31 +766,6 @@ img {
     margin-bottom: 0;
     padding-left: 26px;
     padding-right: 26px;
-  }
-
-  .vacancies__list::after {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 430px;
-    width: 16px;
-    right: -16px;
-    bottom: -16px;
-    background-image: url(../img/bg_green.jpg);
-    height: 430px;
-    width: 16px;
-    background-image: url(../img/bg-green.jpg);
-  }
-
-  .vacancies__list::before {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 16px;
-    width: 630px;
-    right: -16px;
-    bottom: -16px;
-    background-image: url(../img/bg_green.jpg);
   }
 
   .vacancies__item {
@@ -1053,15 +1024,14 @@ img {
 
   .vacancies {
     box-shadow: none;
-    margin-bottom: 0;
     background-image: none;
   }
 
   .vacancies__wrapper {
     box-shadow: none;
-    background-position: top 50px left 0,top 0 right 364px,bottom 100px right 276px,bottom 134px left 435px;
+    background-position: top 50px left 0, top 0 right 364px, bottom 100px right 276px, bottom 134px left 435px;
     background-repeat: no-repeat;
-    background-image: url(../img/vacancies/bg_sec_8_1920.png), url(../img/vacancies/bg_sec_8.2_1920.png), url(../img/bg_grey.jpg), url(../img/bg_green.jpg);
+    background-image: url(../img/vacancies/bg_sec_8_1920.png), url(../img/vacancies/bg_green_sec_8_1920.png), url(../img/bg_grey.jpg), url(../img/bg_green.jpg);
   }
 
   .vacancies__box-info {
@@ -1078,26 +1048,18 @@ img {
     right: 0px;
   }
 
+  .vacancies__subtitle {
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    text-align: right;
+  }
+
   .vacancies__list {
     width: 850px;
     padding-left: 0;
     padding-right: 0;
     padding-top: 142px;
     padding-bottom: 200px;
-  }
-
-  .vacancies__list::before {
-    height: 458px;
-    width: 30px;
-    right: 408px;
-    top: 0px;
-  }
-
-  .vacancies__list::after {
-    height: 458px;
-    width: 30px;
-    right: 408px;
-    top: 0px;
   }
 
   .vacancies__item:last-of-type {
