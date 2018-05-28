@@ -1,38 +1,46 @@
 .vacancies {
   position: relative;
-  background-image: url(../img/bg-grey.jpg);
+  background-image: url(../img/bg_grey.jpg);
   @media (min-width: 768px) {
     margin-bottom: 122px;
-    box-shadow: inset 0px -97px 0px 0px $white,
-    inset 0px 45px 0px 0px $white;
+    box-shadow: inset 0px -97px 0px 0px $white, inset 0px 45px 0px 0px $white;
+  }
 
+  @media (min-width: 1920px) {
+    box-shadow: none;
+    margin-bottom: 0;
+    background-image: none;
   }
 }
-
-// .vacancies__background{
-//   width: 100%;
-//   height: 100%;
-//   @media (min-width: 768px) {
-//     background-image: url(../img/bg-grey.jpg);
-//   }
-  
-// }
 
 .vacancies__wrapper {
   @extend %container;
   position: relative;
   margin: 0 auto;
-  background-image: url(../img/bg-grey.jpg);
+  background-image: url(../img/bg_grey.jpg);
+
   @media (min-width: 768px) {
     box-shadow: 0px 20px 32px 0px rgba(0, 0, 0, 0.17);
     width: 698px;
   }
+
+  @media (min-width: 1920px) {
+    box-shadow: none;
+    background-position: top 50px left 0,top 0 right 364px,bottom 100px right 276px,bottom 134px left 435px;
+    background-repeat: no-repeat;
+    background-image: url(../img/vacancies/bg_sec_8_1920.png),
+      url(../img/vacancies/bg_sec_8.2_1920.png), url(../img/bg_grey.jpg),
+      url(../img/bg_green.jpg);
+  }
 }
 
 .vacancies__box-info {
-  @include flex(column, space-between, center);
   padding-top: 66px;
   margin-bottom: 36px;
+
+  @media (min-width: 1920px) {
+    padding-top: 0;
+  }
 }
 
 .vacancies__underline {
@@ -50,6 +58,11 @@
     color: $main-blue;
   }
 
+  @media (min-width: 1920px) {
+    text-align: left;
+    max-width: 558px;
+  }
+
   &::before {
     @include before("", block);
     @extend %underline;
@@ -57,9 +70,14 @@
     @media (min-width: 768px) {
       bottom: -52px;
       right: 158px;
-      transform: none; 
+      transform: none;
       width: 250px;
       height: 2px;
+    }
+
+    @media (min-width: 1920px) {
+      bottom: -60px;
+      right: 0px;
     }
   }
 }
@@ -67,6 +85,12 @@
 .vacancies__subtitle {
   @include font-mixin("Museo_900", 0.88rem, $header-color);
   @extend %subtitle;
+
+  @media (min-width: 768px) {
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    text-align: right;
+  }
 
   &--black {
     color: $main-blue;
@@ -87,24 +111,49 @@
     margin-bottom: 0;
     padding-left: 26px;
     padding-right: 26px;
-    
-    &::after{
+
+    &::after {
       @include before("", block);
       height: 430px;
       width: 16px;
       right: -16px;
       bottom: -16px;
+      background-image: url(../img/bg_green.jpg);
+      height: 430px;
+      width: 16px;
       background-image: url(../img/bg-green.jpg);
-    }  
+    }
 
-    &::before{
+    &::before {
       @include before("", block);
       height: 16px;
       width: 630px;
       right: -16px;
       bottom: -16px;
-      background-image: url(../img/bg-green.jpg);
-    }  
+      background-image: url(../img/bg_green.jpg);
+    }
+  }
+
+  @media (min-width: 1920px) {
+    width: 850px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 142px;
+    padding-bottom: 200px;
+
+    &::before {
+      height: 458px;
+      width: 30px;
+      right: 408px;
+      top: 0px;
+    }
+
+    &::after {
+      height: 458px;
+      width: 30px;
+      right: 408px;
+      top: 0px;
+    }
   }
 }
 
@@ -131,10 +180,32 @@
       order: 1;
     }
   }
+
+  &:last-of-type {
+    @media (min-width: 1920px) {
+      flex-direction: row;
+      min-width: 558px;
+      position: relative;
+
+      .vacancies__item-caption {
+        padding-left: 52px;
+      }
+    }
+  }
+}
+
+.vacancies__item-wrapper {
+  @media (min-width: 1920px) {
+    // width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .vacancies__item-caption {
   @include font-mixin("Museo_900", 1rem, $header-color);
+  line-height: 1.5rem;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -145,6 +216,10 @@
   margin: 0;
   position: relative;
   border-bottom: 1px solid rgba($color: $header-color, $alpha: 0.102);
+
+  @media (min-width: 1920px) {
+    font-size: 1.25rem;
+  }
 
   &::after {
     @include before("", block);
@@ -226,17 +301,6 @@
     color: $main-blue;
     font-size: 1.375rem;
     border-bottom: 2px $black solid;
-    // position: relative;
-
-    // &::before {
-    //   @include before("", block);
-    //   background-color: $main-blue;
-    //   background-color: $header-color;
-    //   right: 0;
-    //   bottom: 2px;
-    //   width: 100%;
-    //   height: 2px;
-    // }
   }
 }
 
@@ -251,7 +315,9 @@
 
 .vacancies__item-button {
   @include font-mixin("Museo_900", 0.88rem, $white);
+  line-height: 1.625rem;
   border: none;
+  padding: 0;
   border-radius: 5px;
   background-image: linear-gradient(
     90deg,
@@ -259,22 +325,41 @@
     rgb(251, 7, 64) 100%
   );
   box-shadow: 0px 12px 20px 0px rgba(28, 28, 30, 0.21);
-  width: 241px;
+  width: 100%;
   height: 55px;
   cursor: pointer;
   text-transform: uppercase;
-  line-height: 1.857rem;
   text-shadow: 0px 1px 1px rgba(28, 28, 30, 0.32);
   transition: transform 0.2s linear;
 
   &:hover {
     transform: scale(1.02);
   }
+
+  @media (min-width: 1920px) {
+    font-size: 1rem;
+    width: 322px;
+    align-self: center;
+    margin-bottom: 32px;
+  }
 }
 
 .vacancies__item-data {
   @include font-mixin("Ubuntu-mono_R", 0.75rem, $header-color);
-  transform: matrix(1, 0, 0, 0.98377291081856, 0, 0);
+  line-height: 1.5rem;
+  // transform: matrix(1, 0, 0, 0.98377291081856, 0, 0);
+  margin: 0;
+  margin-bottom: 6px;
+
+  @media (min-width: 1920px) {
+    position: absolute;
+    right: -86px;
+    bottom: 128px;
+    font-size: 0.875rem;
+    margin-bottom: 0;
+    transform: rotate(90deg);
+    transform-origin: center center;
+  }
 
   &--red {
     color: $red;

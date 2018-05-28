@@ -1,5 +1,17 @@
 .path {
   @extend %container;
+  @media (min-width: 768px) {
+    background-image: url(../img/path/bg_sec_7.png);
+    background-repeat: no-repeat no-repeat;
+    background-position: center 148px;
+  }
+
+  @media (min-width: 1920px) {
+    background-image: url(../img/path/bg_sec_7_1920.png);
+    background-position: 78% 48px;
+    background-size: 54%;
+  }
+
 }
 
 .path__wrapper {
@@ -7,9 +19,6 @@
 
   @media (min-width: 768px) {
     max-width: 768px;
-    background-image: url(../img/path/bg_sec_7.png);
-    background-repeat: no-repeat no-repeat;
-    background-position: 30px 118px;
   }
 
   @media (min-width: 1920px) {
@@ -31,7 +40,6 @@
 
   @media (min-width: 768px) {
     text-align: left;
-    // margin: 0 auto;
     width: 100%;
     margin-bottom: 130px;
   }
@@ -131,21 +139,8 @@
   @media (min-width: 1920px) {
     font-size: 1.125rem;
     line-height: 1.444;
+    width: 350px;
   }
-
-  // &:not(:nth-last-of-type(2)) {
-  //   @media (min-width: 768px) {
-  //     &::after {
-  //       @include before("", block);
-  //       background-color: $dark-smoke2;
-  //       opacity: 0.141;
-  //       width: 2px;
-  //       height: 42px;
-  //       bottom: -41px;
-  //       left: 44px;
-  //     }
-  //   }
-  // }
 
   &:not(:last-of-type) {
     margin-bottom: 40px;
