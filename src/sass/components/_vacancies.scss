@@ -14,11 +14,13 @@
   }
 }
 
-.vacancies__background{
-  padding-bottom: 18px;
-  width: 734px;
-  margin: 0 auto;
-  background: url(../../img/bg_green.jpg) bottom right no-repeat;
+.vacancies__background {
+  @media (min-width: 768px) and (max-width: 1919.98px) {
+    padding-bottom: 18px;
+    width: 734px;
+    margin: 0 auto;
+    background: url(../../img/bg_green.jpg) bottom right no-repeat;
+  }
 }
 
 .vacancies__wrapper {
@@ -31,7 +33,6 @@
     box-shadow: 0px 20px 32px 0px rgba(0, 0, 0, 0.17);
     width: 698px;
     background: url(../img/vacancies/bg_grey_sec_8_720.jpg);
-    
   }
 
   @media (min-width: 1920px) {
@@ -251,6 +252,7 @@
 
   &--before {
     padding: 0;
+    margin-bottom: 24px;
     border-bottom: none;
 
     &::before {

@@ -239,13 +239,6 @@ img {
   background-image: url(../img/bg_grey.jpg);
 }
 
-.vacancies__background {
-  padding-bottom: 18px;
-  width: 734px;
-  margin: 0 auto;
-  background: url(../../img/bg_green.jpg) bottom right no-repeat;
-}
-
 .vacancies__wrapper {
   position: relative;
   margin: 0 auto;
@@ -373,6 +366,7 @@ img {
 
 .vacancies__item-caption--before {
   padding: 0;
+  margin-bottom: 24px;
   border-bottom: none;
 }
 
@@ -1200,5 +1194,12 @@ img {
   .employment {
     padding-left: 40px;
     padding-right: 40px;
+  }
+
+  .vacancies__background {
+    padding-bottom: 18px;
+    width: 734px;
+    margin: 0 auto;
+    background: url(../../img/bg_green.jpg) bottom right no-repeat;
   }
 }
