@@ -649,7 +649,7 @@ img {
     line-height: 2.5rem;
   }
 
-  .path {
+  .path--background {
     background-image: url(../img/path/bg_sec_7.png);
     background-repeat: no-repeat no-repeat;
     background-position: center 148px;
@@ -967,10 +967,11 @@ img {
     line-height: 3.125rem;
   }
 
-  .path {
+  .path--background {
+    width: 1870px;
+    margin: 0 auto;
     background-image: url(../img/path/bg_sec_7_1920.png);
-    background-position: 78% 156px;
-    background-size: 54%;
+    background-position: right 0 top 108px;
   }
 
   .path__wrapper {
@@ -979,9 +980,9 @@ img {
   }
 
   .path__title {
-    max-width: 652px;
+    max-width: 600px;
     padding-top: 152px;
-    margin-right: 0;
+    margin-right: 50px;
   }
 
   .path__img {

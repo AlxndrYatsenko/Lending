@@ -1,5 +1,13 @@
 .path {
   @extend %container;
+  
+
+  @media (min-width: 1920px) {
+   
+  }
+}
+
+.path--background{
   @media (min-width: 768px) {
     background-image: url(../img/path/bg_sec_7.png);
     background-repeat: no-repeat no-repeat;
@@ -7,11 +15,11 @@
   }
 
   @media (min-width: 1920px) {
+    width: 1870px;
+    margin: 0 auto;
     background-image: url(../img/path/bg_sec_7_1920.png);
-    background-position: 78% 156px;
-    background-size: 54%;
+    background-position: right 0 top 108px;
   }
-
 }
 
 .path__wrapper {
@@ -45,9 +53,9 @@
   }
 
   @media (min-width: 1920px) {
-    max-width: 652px;
+    max-width: 600px;
     padding-top: 152px;
-    margin-right: 0;
+    margin-right: 50px;
   }
 }
 
