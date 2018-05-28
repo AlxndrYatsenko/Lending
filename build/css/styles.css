@@ -642,6 +642,13 @@ img {
 }
 
 @media (min-width: 768px) {
+  .path,
+  .vacancies__wrapper,
+  .employment {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
   .path__title,
   .vacancies__title,
   .employment__title {
@@ -1189,13 +1196,6 @@ img {
 }
 
 @media (min-width: 768px) and (max-width: 1919.98px) {
-  .path,
-  .vacancies__wrapper,
-  .employment {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
   .vacancies__background {
     padding-bottom: 18px;
     width: 734px;
