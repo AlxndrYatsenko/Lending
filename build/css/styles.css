@@ -670,7 +670,7 @@ img {
   }
 
   .path__img {
-    width: 362px;
+    width: 358px;
     position: absolute;
     top: 0;
     right: 0;
@@ -969,7 +969,7 @@ img {
 
   .path {
     background-image: url(../img/path/bg_sec_7_1920.png);
-    background-position: 78% 48px;
+    background-position: 78% 156px;
     background-size: 54%;
   }
 
@@ -985,6 +985,7 @@ img {
   }
 
   .path__img {
+    height: auto;
     width: 654px;
   }
 
