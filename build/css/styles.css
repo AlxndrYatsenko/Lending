@@ -649,20 +649,18 @@ img {
     line-height: 2.5rem;
   }
 
-  .path--background {
-    background-image: url(../img/path/bg_sec_7.png);
-    background-repeat: no-repeat no-repeat;
-    background-position: center 148px;
-  }
-
   .path__wrapper {
     max-width: 768px;
+    background-image: url(../img/path/bg_sec_7.png);
+    background-repeat: no-repeat no-repeat;
+    background-position: left 7px top 100px;
   }
 
   .path__title {
     text-align: left;
     width: 100%;
     margin-bottom: 130px;
+    padding-top: 0;
   }
 
   .path__box-info {
@@ -970,18 +968,19 @@ img {
   .path--background {
     width: 1870px;
     margin: 0 auto;
+    background-repeat: no-repeat;
     background-image: url(../img/path/bg_sec_7_1920.png);
-    background-position: right 0 top 108px;
+    background-position: right 0 top 18px;
   }
 
   .path__wrapper {
+    background-image: none;
     max-width: 1146px;
     padding-right: 0;
   }
 
   .path__title {
     max-width: 600px;
-    padding-top: 152px;
     margin-right: 50px;
   }
 

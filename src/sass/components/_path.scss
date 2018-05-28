@@ -1,24 +1,17 @@
 .path {
   @extend %container;
-  
 
   @media (min-width: 1920px) {
-   
   }
 }
 
-.path--background{
-  @media (min-width: 768px) {
-    background-image: url(../img/path/bg_sec_7.png);
-    background-repeat: no-repeat no-repeat;
-    background-position: center 148px;
-  }
-
+.path--background {
   @media (min-width: 1920px) {
     width: 1870px;
     margin: 0 auto;
+    background-repeat: no-repeat;
     background-image: url(../img/path/bg_sec_7_1920.png);
-    background-position: right 0 top 108px;
+    background-position: right 0 top 18px;
   }
 }
 
@@ -27,9 +20,13 @@
 
   @media (min-width: 768px) {
     max-width: 768px;
+    background-image: url(../img/path/bg_sec_7.png);
+    background-repeat: no-repeat no-repeat;
+    background-position: left 7px top 100px;
   }
 
   @media (min-width: 1920px) {
+    background-image: none;
     max-width: 1146px;
     padding-right: 0;
   }
@@ -50,11 +47,11 @@
     text-align: left;
     width: 100%;
     margin-bottom: 130px;
+    padding-top: 0;
   }
 
   @media (min-width: 1920px) {
     max-width: 600px;
-    padding-top: 152px;
     margin-right: 50px;
   }
 }
