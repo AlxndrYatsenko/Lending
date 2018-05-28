@@ -3,16 +3,22 @@
   background-image: url(../img/bg_grey.jpg);
 
   @media (min-width: 768px) {
-    margin-bottom: 0;
-    padding-bottom: 122px;
-    // background-position: top 50px left 0, top 0 right 364px;
-    background: url(../../img/bg_green.jpg) bottom 108px right 474px no-repeat,url(../img/vacancies/bg_grey_sec_8_720.jpg) 50% repeat-x;
+    margin-bottom: 122px;
+    // padding-bottom: 122px;
+    background: url(../img/vacancies/bg_grey_sec_8_720.jpg) 50% repeat-x;
   }
 
   @media (min-width: 1920px) {
     box-shadow: none;
     background-image: none;
   }
+}
+
+.vacancies__background{
+  padding-bottom: 18px;
+  width: 734px;
+  margin: 0 auto;
+  background: url(../../img/bg_green.jpg) bottom right no-repeat;
 }
 
 .vacancies__wrapper {

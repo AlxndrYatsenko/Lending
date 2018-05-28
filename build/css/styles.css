@@ -239,6 +239,13 @@ img {
   background-image: url(../img/bg_grey.jpg);
 }
 
+.vacancies__background {
+  padding-bottom: 18px;
+  width: 734px;
+  margin: 0 auto;
+  background: url(../../img/bg_green.jpg) bottom right no-repeat;
+}
+
 .vacancies__wrapper {
   position: relative;
   margin: 0 auto;
@@ -735,9 +742,8 @@ img {
   }
 
   .vacancies {
-    margin-bottom: 0;
-    padding-bottom: 122px;
-    background: url(../../img/bg_green.jpg) bottom 108px right 474px no-repeat, url(../img/vacancies/bg_grey_sec_8_720.jpg) 50% repeat-x;
+    margin-bottom: 122px;
+    background: url(../img/vacancies/bg_grey_sec_8_720.jpg) 50% repeat-x;
   }
 
   .vacancies__wrapper {
